@@ -92,3 +92,6 @@ The Goal: Prove your "Tiled" version is better using actual hardware metrics.
     Use rocprof to generate a CSV of the execution times.
 
     Graph your results. You should see the "Tiled" version's GFLOPS curve stay high while the "Naive" version drops off as the matrix gets larger.
+
+
+Note : I created this roadmap to learn about GPU programming on my AMD Strix Halo Chipset (Radeon 8060S). I wanted to do a review of the research paper mentioned above in the decription and also to see if I can play around with the findings of the paper. I asked gemini to create a bare minimum roadmap that would help me learn enough about gpu programming to recreate the findings of the paper.
