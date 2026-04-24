@@ -4,11 +4,11 @@
 // This __global__ specifies to the cpu (host) that this code is to be run inside gpu (device)
 __global__ void greeting_kernel() {
     // Printing the ID using blockDim, blockId and threadId
-    printf("Thread ID - %d\n", blockIdx.x * blockDim.x + threadIdx.x);
+    printf("Thread ID - %d, Block ID - %d\n", blockIdx.x * blockDim.x + threadIdx.x, blockIdx.x);
 }
 
 int main() {
-    greeting_kernel<<<8, 64>>>();
+    greeting_kernel<<<4, 16>>>();
     // same as using this macro to call gpu functions hipLaunchKernelGGL(greeting_kernel, dim3(8), dim3(64), 0, 0);
 
     /**
